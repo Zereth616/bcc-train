@@ -2,11 +2,11 @@
 
 ## Description
 This is the best, full fledged train script for RedM! A multitude of features like built in track switching, train inventories, ownership and more!
+Updated with more advanced features 
 
 ## Features
 - Buy and Sell trains at the train stations
 - Track Switching
-- Bacchus Bridge explodable
 - Multiple train stations
 - Station access can be limited by job and jobgrade
 - Station hours may be set individually for each station or disabled to allow the station to remain open
@@ -73,3 +73,4 @@ local retval = exports['bcc-train']:BacchusBridgeDestroyed()
 ## GitHub
 
 - https://github.com/BryceCanyonCounty/bcc-train
+
