@@ -1,4 +1,6 @@
 local switched = false
+local isSwitching = false -- prevent multiple toggles at once
+
 
 function MainMenu(station)
     VORPMenu.CloseAll()
@@ -268,6 +270,7 @@ function DrivingMenu(trainCfg, myTrainData)
             hop = 1
         },
         { label = _U('switchTrack'),  value = 'switchtrack', desc = '' },
+    
     }
     if Config.cruiseControl then
         table.insert(elements, { label = _U('forward'), value = 'forward', desc = '' })
@@ -364,15 +367,18 @@ function DrivingMenu(trainCfg, myTrainData)
                     end
                 end
             end,
-            ['switchtrack'] = function()
-                if not switched then
-                    TrackSwitch(true)
-                    switched = true
-                    VORPcore.NotifyRightTip(_U('switchingOn'), 4000)
-                else
-                    TrackSwitch(false)
-                    switched = false
-                    VORPcore.NotifyRightTip(_U('switchingOn'), 4000)
+
+           ['switchtrack'] = function()
+               if not switched then
+             -- Call TrackSwitch with "on"
+               TrackSwitch("on")
+               switched = true
+               VORPcore.NotifyRightTip(_U('switchingOn'), 4000)
+              else
+             -- Call TrackSwitch with "off"
+              TrackSwitch("off")
+                switched = false
+                VORPcore.NotifyRightTip(_U('switchingOff'), 4000) -- Use different message for off
                 end
             end,
             ['stopEngine'] = function()
