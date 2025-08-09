@@ -59,12 +59,6 @@ local retval = exports['bcc-train']:CheckIfTrainIsSpawned()
 local retval = exports['bcc-train']:GetTrainEntity()
 ```
 
-### Check if Bacchus Bridge Destroyed (Server Side Use Only)
-- Returns true if the bridge is destroyed false if not.
-```Lua
-local retval = exports['bcc-train']:BacchusBridgeDestroyed()
-```
-
 ## Credits and Notes
 - All imagery was provided by Lady Grey our in house designer
 - Thanks sav for the nui
@@ -73,4 +67,5 @@ local retval = exports['bcc-train']:BacchusBridgeDestroyed()
 ## GitHub
 
 - https://github.com/BryceCanyonCounty/bcc-train
+
 
