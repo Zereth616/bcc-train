@@ -6,7 +6,7 @@ local modelHashMap = {
     ['gunslinger4_config'] = 0xCD2C7CA1 ,
     ['prisoner_escort_config'] = 0x005E03AD,
     ['winter4_config'] = 0x3260CE89,
-    ['prisoner_escort_config1'] = 0x005E03AD,
+    ['prisoner_escort_config1'] = 0x005E03AD,  -- test model "make sure when you add in more trains to stick to the format here!" Name in brackets must correspond with name in trains config to work ! 
 }
 
 -- Start Train
@@ -462,3 +462,4 @@ AddEventHandler('playerDropped', function ()
         TriggerServerEvent('bcc-train:UpdateTrainSpawnVar', false)
     end
 end)
+
