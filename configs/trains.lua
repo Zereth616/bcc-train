@@ -1,37 +1,59 @@
------------------------------------------------------
--- Train Model Config
------------------------------------------------------
+-- Your train definitions
+-- Model Name of the Train - DO NOT CHANGE
+-- Displayed Name of this Train
+-- Purchase Price for this Train
+-- Max Speed / *30 is Highest Game Allows*
+-- Set false to Disable Fuel Use
+ -- Maximum Fuel Capacity
+-- Number of Items Needed to Fuel Train
+-- Time in Seconds to Decrease Fuel Level
+ -- Amount of Fuel to Decrease
+
+
+ -- Set false to Disable Condition Decrease
+ -- Maximum Condition
+-- Number of Items Needed to Repair Train
+ -- Time in Seconds to Decrease Condition Level
+-- Amount of Condition to Decrease
+ -- Set to false to Disable Train Inventory
+ -- Inventory can Hold Weapons
+  -- Inventory is Shared with All Players
+ 
+ -- Show Blip for Train Location
+-- Name of Blip on the Map
+-- Default: -250506368
+-- Color of Blip
 Trains = {
     appleseed = {
-        model = 'appleseed_config',     -- Model Name of the Train - DO NOT CHANGE
-        label = 'Appleseed',            -- Displayed Name of this Train
-        price = 150,                    -- Purchase Price for this Train
-        maxSpeed = 15,                  -- Max Speed / *30 is Highest Game Allows*
+        model = 'appleseed_config', -- keep as string key
+        label = 'Appleseed',
+        price = 150,
+        maxSpeed = 15,
         fuel = {
-            enabled = true,             -- Set false to Disable Fuel Use
-            maxAmount = 100,            -- Maximum Fuel Capacity
-            itemAmount = 5,             -- Number of Items Needed to Fuel Train
-            decreaseTime = 30,          -- Time in Seconds to Decrease Fuel Level
-            decreaseAmount = 5          -- Amount of Fuel to Decrease
+            enabled = true,
+            maxAmount = 100,
+            itemAmount = 5,
+            decreaseTime = 30,
+            decreaseAmount = 5
         },
         condition = {
-            enabled = true,             -- Set false to Disable Condition Decrease
-            maxAmount = 100,            -- Maximum Condition
-            itemAmount = 5,             -- Number of Items Needed to Repair Train
-            decreaseTime = 30,          -- Time in Seconds to Decrease Condition Level
-            decreaseAmount = 5          -- Amount of Condition to Decrease
+            enabled = true,
+            maxAmount = 100,
+            itemAmount = 5,
+            decreaseTime = 30,
+            decreaseAmount = 5
         },
         inventory = {
-            enabled = true,             -- Set to false to Disable Train Inventory
-            limit = 100,                -- Inventory Limit for this Train
-            acceptWeapons = true,       -- Inventory can Hold Weapons
-            shared = true,              -- Inventory is Shared with All Players
+            enabled = true,
+            limit = 100,
+            acceptWeapons = true,
+            shared = true,
         },
         blip = {
-            show   = true,              -- Show Blip for Train Location
-            name   = 'Train',           -- Name of Blip on the Map
-            sprite = -250506368,        -- Default: -250506368
-            color  = 'WHITE'            -- Color of Blip
+            show = true,
+            name = 'Train',
+            sprite = -250506368,
+            color = 'WHITE'
         },
     },
     bountyhunter = {
@@ -60,10 +82,10 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
         },
     },
     engine = {
@@ -92,10 +114,10 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
         },
     },
     gunslinger3 = {
@@ -124,10 +146,10 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
         },
     },
     gunslinger4 = {
@@ -156,10 +178,10 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
         },
     },
     prisoner = {
@@ -188,10 +210,42 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
+        },
+    },
+    test = {
+        model = 'prisoner_escort_config1',
+        label = 'Test',
+        price = 100,
+        maxSpeed = 10,
+        fuel = {
+            enabled = true,
+            maxAmount = 100,
+            itemAmount = 5,
+            decreaseTime = 30,
+            decreaseAmount = 5
+        },
+        condition = {
+            enabled = true,
+            maxAmount = 100,
+            itemAmount = 5,
+            decreaseTime = 30,
+            decreaseAmount = 5
+        },
+        inventory = {
+            enabled = true,
+            limit = 100,
+            acceptWeapons = true,
+            shared = true,
+        },
+        blip = {
+            show = true,
+            name = 'Train',
+            sprite = -250506368,
+            color = 'WHITE'
         },
     },
     winter4 = {
@@ -220,10 +274,10 @@ Trains = {
             shared = true,
         },
         blip = {
-            show   = true,
-            name   = 'Train',
+            show = true,
+            name = 'Train',
             sprite = -250506368,
-            color  = 'WHITE'
+            color = 'WHITE'
         }
     }
 }
