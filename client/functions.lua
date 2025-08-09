@@ -28,6 +28,12 @@ EngineStarted = false
 ForwardActive = false
 BackwardActive = false
 
+function OpenAllDoors(MyTrain, maxDoorId)
+    for doorId = 0, maxDoorId do
+        Citizen.InvokeNative(0x550CE392A4672412, Mytrain, doorId, true, true)
+    end
+end
+
 function AddBlip(station)
     local stationCfg = Stations[station]
     stationCfg.Blip = Citizen.InvokeNative(0x554d9d53f696d002, 1664425300, stationCfg.npc.coords) -- BlipAddForCoords
@@ -102,9 +108,9 @@ function LoadTrainCars(trainHash)
         end
     end
 end
-
-function TrackSwitch(toggle)
-    local trackModels = {
+function TrackSwitch(direction, models)
+    -- Default models if none provided
+    models = models or {
         { model = 'FREIGHT_GROUP' },
         { model = 'TRAINS3' },
         { model = 'BRAITHWAITES2_TRACK_CONFIG' },
@@ -113,16 +119,26 @@ function TrackSwitch(toggle)
         { model = 'TRAINS_NB1' },
         { model = 'TRAINS_INTERSECTION1_ANN' },
     }
-    local counter = 0
-    repeat
-    for _, v in pairs(trackModels) do
-        local trackHash = joaat(v.model)
-        Citizen.InvokeNative(0xE6C5E2125EB210C1, trackHash, counter, toggle)
-    end
-    counter = counter + 1
-    until counter >= 25
-end
 
+    -- Validate direction input
+    local toggleValue
+    if direction == "on" then
+        toggleValue = true
+    elseif direction == "off" then
+        toggleValue = false
+    else
+        print("Invalid direction specified. Use 'on' or 'off'.")
+        return
+    end
+
+    -- Loop through counters from 0 to 24
+    for counter = 0, 24 do
+        for _, v in ipairs(models) do
+            local trackHash = joaat(v.model)
+            Citizen.InvokeNative(0xE6C5E2125EB210C1, trackHash, counter, toggleValue)
+        end
+    end
+end   
 AddEventHandler('bcc-train:ResetTrain', function()
     if MyTrain then
         DeleteEntity(MyTrain)
