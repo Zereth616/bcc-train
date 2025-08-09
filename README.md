@@ -44,6 +44,7 @@ This is the best, full fledged train script for RedM! A multitude of features li
 - Press `U` to access train inventory
 - Cruise control will disengage if conductor leaves engine seat
 - Buy a train from a station, spawn it and have fun!
+- Add any train hash in the client.lua to use just make sure the modelhash corresponds to the one in the trains config 
 
 ## Api
 ### Check if train spawned! (Server Side Use only)
@@ -70,4 +71,5 @@ local retval = exports['bcc-train']:BacchusBridgeDestroyed()
 - Images for items can be found under the imgs/itemImages folder
 
 ## GitHub
+
 - https://github.com/BryceCanyonCounty/bcc-train
