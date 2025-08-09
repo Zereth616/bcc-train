@@ -1,7 +1,6 @@
 local switched = false
 local isSwitching = false -- prevent multiple toggles at once
 
-
 function MainMenu(station)
     VORPMenu.CloseAll()
     DisplayRadar(false)
@@ -418,3 +417,4 @@ function MaxSpeedCalc(speed)
     end
     Citizen.InvokeNative(0x9F29999DFDF2AEB8, MyTrain, setMaxSpeed) -- SetTrainMaxSpeed
 end
+
