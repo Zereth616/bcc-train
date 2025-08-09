@@ -2,7 +2,7 @@
 
 ## Description
 This is the best, full fledged train script for RedM! A multitude of features like built in track switching, train inventories, ownership and more!
-Updated with more advanced features 
+Updated with more advanced features - Some trains don't like the new interiors but its only a handful out of the 50+ you can use. 
 
 ## Features
 - Buy and Sell trains at the train stations
@@ -67,5 +67,6 @@ local retval = exports['bcc-train']:GetTrainEntity()
 ## GitHub
 
 - https://github.com/BryceCanyonCounty/bcc-train
+
 
 
