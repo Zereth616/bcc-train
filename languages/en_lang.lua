@@ -87,5 +87,8 @@ Locales['en_lang'] = {
     trainNotSpawnedWeb = 'Train has despawned and is no longer in use!',
     bacchusDestroyedWebhook = 'Bacchus bridge has been destroyed!',
     charPriceWeb = '\nPrice: ',
-    paidDeliveryWeb = "\nGot paid for delivery mission: "
+    paidDeliveryWeb = "\nGot paid for delivery mission: ",
+    switchingToLeft = 'Switching to Left',
+    switchingToRight = 'Switching to Right',
+    switchingOff = 'Switched Off'
 }
