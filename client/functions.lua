@@ -3,7 +3,7 @@ VORPcore = exports.vorp_core:GetCore()
 VORPMenu = {}
 TriggerEvent('vorp_menu:getData', function(cb)
     VORPMenu = cb
-end)
+end)  
 BccUtils = exports['bcc-utils'].initiate()
 MiniGame = exports['bcc-minigames'].initiate()
 -- Prompts
@@ -275,3 +275,4 @@ function StartDeliveryPrompt()
         DeliveryPromptStarted = true
     end
 end
+
