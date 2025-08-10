@@ -1,14 +1,13 @@
 local modelHashMap = {
-    ['appleseed_config'] = 987516329,
-    ['bountyhunter_config'] = 0x515E31ED,
-    ['engine_config'] = 0x487B2BE7,
-    ['gunslinger3_config'] = 0x8EAC625C,
+    ['appleseed_config'] = 0x10461E19,
+    ['bountyhunter_config'] = 0x8EAC625C,
+    ['engine_config'] =  0x3260CE89,
+    ['gunslinger3_config'] = 0x2D3645FA,
     ['gunslinger4_config'] = 0xCD2C7CA1 ,
-    ['prisoner_escort_config'] = 0x005E03AD,
-    ['winter4_config'] = 0x3260CE89,
-    ['prisoner_escort_config1'] = 0x005E03AD,  -- test model "make sure when you add in more trains to stick to the format here!" Name in brackets must correspond with name in trains config to work ! 
-}
-
+    ['prisoner_escort_config'] = 0x515E31ED,
+    ['winter4_config'] = 0x3ADC4DA9,
+    ['east_config'] = 0x4A73E49C, -- test model "make sure when you add in more trains to stick to the format here!" Name in brackets must correspond with name in trains config to work ! 
+} 
 -- Start Train
 CreateThread(function()
     StartMainPrompts()
@@ -462,4 +461,5 @@ AddEventHandler('playerDropped', function ()
         TriggerServerEvent('bcc-train:UpdateTrainSpawnVar', false)
     end
 end)
+
 
