@@ -1,28 +1,29 @@
 -- Your train definitions
 -- Model Name of the Train - DO NOT CHANGE
 -- Displayed Name of this Train
--- Purchase Price for this Train
--- Max Speed / *30 is Highest Game Allows*
--- Set false to Disable Fuel Use
- -- Maximum Fuel Capacity
--- Number of Items Needed to Fuel Train
--- Time in Seconds to Decrease Fuel Level
- -- Amount of Fuel to Decrease
+    -- Purchase Price for this Train
+       -- Max Speed / *30 is Highest Game Allows*
+      -- Set false to Disable Fuel Use
+       -- Maximum Fuel Capacity
+        -- Number of Items Needed to Fuel Train
+       -- Time in Seconds to Decrease Fuel Level
+       -- Amount of Fuel to Decrease
 
 
- -- Set false to Disable Condition Decrease
- -- Maximum Condition
--- Number of Items Needed to Repair Train
- -- Time in Seconds to Decrease Condition Level
--- Amount of Condition to Decrease
- -- Set to false to Disable Train Inventory
- -- Inventory can Hold Weapons
-  -- Inventory is Shared with All Players
+      -- Set false to Disable Condition Decrease
+         -- Maximum Condition
+          -- Number of Items Needed to Repair Train
+          -- Time in Seconds to Decrease Condition Level
+        -- Amount of Condition to Decrease
+    
+       -- Set to false to Disable Train Inventory
+     -- Inventory can Hold Weapons
+           -- Inventory is Shared with All Players
  
- -- Show Blip for Train Location
--- Name of Blip on the Map
--- Default: -250506368
--- Color of Blip
+       -- Show Blip for Train Location
+       -- Name of Blip on the Map
+       -- Default: -250506368
+      -- Color of Blip
 Trains = {
     appleseed = {
         model = 'appleseed_config', -- keep as string key
@@ -151,7 +152,7 @@ Trains = {
             sprite = -250506368,
             color = 'WHITE'
         },
-    },
+    }, 
     gunslinger4 = {
         model = 'gunslinger4_config',
         label = 'Gunslinger 4',
@@ -217,7 +218,7 @@ Trains = {
         },
     },
     test = {
-        model = 'prisoner_escort_config1',
+        model = 'east_config',
         label = 'Test',
         price = 100,
         maxSpeed = 10,
