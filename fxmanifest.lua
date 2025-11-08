@@ -29,12 +29,5 @@ ui_page {
   'ui/index.html'
 }
 
-files {
-  'imgs/trainImg.png',
-  'ui/index.html',
-  'ui/js/*.*',
-  'ui/css/*.*',
-  'ui/fonts/*.*',
-}
-
 version '1.1.5'
+
